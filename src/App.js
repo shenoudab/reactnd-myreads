@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
 import BookShelf from './BookShelf'
-import SearchScreen from './SearchScreen';
+import SearchBooks from './SearchBooks';
 import * as BooksAPI from './BooksAPI'
 import {shelfNames, shelfToList} from './utils';
 
@@ -51,7 +51,7 @@ class BooksApp extends Component {
     return (
       <div className="app">
       <Route path='/search' render={() => (
-          <SearchScreen
+          <SearchBooks
             moveBook={this.moveBook}
             shelfList={shelfToList(this.state.shelf_books)}
             />
